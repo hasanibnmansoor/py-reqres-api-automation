@@ -1,0 +1,15 @@
+{
+    "valid_registration": {
+        "email": "eve.holt@reqres.in",
+        "password": "pistol",
+        "response_fields": ["id", "token"]
+    },
+    "no_email_registration": {
+        "password": "password_wo_email",
+        "expected_error_message": {"error": "Missing email or username"}
+    },
+    "no_password_registration": {
+        "email": "no_password@reqres.in",
+        "expected_error_message": {"error": "Missing password"}
+    }
+}

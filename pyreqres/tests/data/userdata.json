@@ -1,0 +1,31 @@
+{
+    "user_ids": {
+        "valid": 2,
+        "invalid": 9999
+    },
+    "list_users": {
+        "positive": [
+            2,
+            6,
+            6
+        ],
+        "negative": [
+            3,
+            12,
+            0
+        ]
+    },
+    "create_user": {
+        "test": "pytest",
+        "language": "python"
+    },
+    "put_user": {
+        "test": "pytest-update-put",
+        "language": "python",
+        "addition": "1+1"
+    },
+    "patch_user": {
+        "test": "pytest-update-patch",
+        "language": "python"
+    }
+}

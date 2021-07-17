@@ -1,0 +1,20 @@
+{
+    "valid_login": {
+        "email": "eve.holt@reqres.in",
+        "password": "cityslicka",
+        "response_fields": ["token"]
+    },
+    "no_email_login": {
+        "password": "password_wo_email",
+        "expected_error_message": {"error": "Missing email or username"}
+    },
+    "no_password_login": {
+        "email": "no_password@reqres.in",
+        "expected_error_message": {"error": "Missing password"}
+    },
+    "invalid_user_login": {
+        "email": "eve.holt@reqres.com",
+        "password": "invalidPassword",
+        "expected_error_message": {"error": "user not found"}
+    }
+}
