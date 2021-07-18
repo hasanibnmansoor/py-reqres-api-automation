@@ -1,0 +1,67 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.9.6, pytest-6.2.4, py-1.10.0, pluggy-0.13.1 -- /Users/manhasan/.pyenv/versions/3.9.6/envs/assignments-venv/bin/python3.9
+cachedir: .pytest_cache
+metadata: {'Python': '3.9.6', 'Platform': 'macOS-11.4-x86_64-i386-64bit', 'Packages': {'pytest': '6.2.4', 'py': '1.10.0', 'pluggy': '0.13.1'}, 'Plugins': {'sugar': '0.9.4', 'html': '3.1.1', 'metadata': '1.11.0', 'rerunfailures': '10.1'}, 'JAVA_HOME': '/Library/Java/JavaVirtualMachines/amazon-corretto-16.jdk/Contents/Home'}
+rootdir: /Users/manhasan/assignments
+plugins: sugar-0.9.4, html-3.1.1, metadata-1.11.0, rerunfailures-10.1
+collecting ... 2021-07-18 18:05:46,001 - pyreqres - test_login - <module> - INFO - Parsing Json Test Data File located at /Users/manhasan/assignments/py-reqres-api-automation/pyreqres/tests/data/logindata.json
+2021-07-18 18:05:46,009 - pyreqres - test_register - <module> - INFO - Parsing Json Test Data File located at /Users/manhasan/assignments/py-reqres-api-automation/pyreqres/tests/data/registerdata.json
+2021-07-18 18:05:46,034 - pyreqres - test_users - <module> - INFO - Parsing Json Test Data File located at /Users/manhasan/assignments/py-reqres-api-automation/pyreqres/tests/data/userdata.json
+collected 18 items
+
+py-reqres-api-automation/pyreqres/tests/test_login.py::test_valid_login 2021-07-18 18:05:46,042 - pyreqres - login - login_user - INFO - [Request INFO]: Url: https://reqres.in/api/login; Data: {'email': 'eve.holt@reqres.in', 'password': 'cityslicka'}
+2021-07-18 18:05:46,777 - pyreqres - api - _UPDATE - INFO - Calling URL https://reqres.in/api/login Successful
+PASSED
+py-reqres-api-automation/pyreqres/tests/test_login.py::test_no_email_login 2021-07-18 18:05:46,779 - pyreqres - login - login_user - INFO - [Request INFO]: Url: https://reqres.in/api/login; Data: {'password': 'password_wo_email'}
+2021-07-18 18:05:47,405 - pyreqres - api - _UPDATE - WARNING - HTTPError during Request for URL https://reqres.in/api/login. Error Details - 400 Client Error: Bad Request for url: https://reqres.in/api/login
+PASSED
+py-reqres-api-automation/pyreqres/tests/test_login.py::test_no_password_login 2021-07-18 18:05:47,407 - pyreqres - login - login_user - INFO - [Request INFO]: Url: https://reqres.in/api/login; Data: {'email': 'no_password@reqres.in'}
+2021-07-18 18:05:47,927 - pyreqres - api - _UPDATE - WARNING - HTTPError during Request for URL https://reqres.in/api/login. Error Details - 400 Client Error: Bad Request for url: https://reqres.in/api/login
+PASSED
+py-reqres-api-automation/pyreqres/tests/test_login.py::test_blank_data_login 2021-07-18 18:05:47,929 - pyreqres - login - login_user - INFO - [Request INFO]: Url: https://reqres.in/api/login; Data: {}
+2021-07-18 18:05:48,727 - pyreqres - api - _UPDATE - WARNING - HTTPError during Request for URL https://reqres.in/api/login. Error Details - 400 Client Error: Bad Request for url: https://reqres.in/api/login
+PASSED
+py-reqres-api-automation/pyreqres/tests/test_login.py::test_invalid_login 2021-07-18 18:05:48,729 - pyreqres - login - login_user - INFO - [Request INFO]: Url: https://reqres.in/api/login; Data: {'email': 'eve.holt@reqres.com', 'password': 'invalidPassword'}
+2021-07-18 18:05:49,181 - pyreqres - api - _UPDATE - WARNING - HTTPError during Request for URL https://reqres.in/api/login. Error Details - 400 Client Error: Bad Request for url: https://reqres.in/api/login
+PASSED
+py-reqres-api-automation/pyreqres/tests/test_register.py::test_valid_registration 2021-07-18 18:05:49,183 - pyreqres - register - register_user - INFO - [Request INFO]: Url: https://reqres.in/api/register; Data: {'email': 'eve.holt@reqres.in', 'password': 'pistol'}
+2021-07-18 18:05:49,624 - pyreqres - api - _UPDATE - INFO - Calling URL https://reqres.in/api/register Successful
+PASSED
+py-reqres-api-automation/pyreqres/tests/test_register.py::test_no_email_registration 2021-07-18 18:05:49,626 - pyreqres - register - register_user - INFO - [Request INFO]: Url: https://reqres.in/api/register; Data: {'password': 'password_wo_email'}
+2021-07-18 18:05:50,088 - pyreqres - api - _UPDATE - WARNING - HTTPError during Request for URL https://reqres.in/api/register. Error Details - 400 Client Error: Bad Request for url: https://reqres.in/api/register
+PASSED
+py-reqres-api-automation/pyreqres/tests/test_register.py::test_no_password_registration 2021-07-18 18:05:50,090 - pyreqres - register - register_user - INFO - [Request INFO]: Url: https://reqres.in/api/register; Data: {'email': 'no_password@reqres.in'}
+2021-07-18 18:05:50,529 - pyreqres - api - _UPDATE - WARNING - HTTPError during Request for URL https://reqres.in/api/register. Error Details - 400 Client Error: Bad Request for url: https://reqres.in/api/register
+PASSED
+py-reqres-api-automation/pyreqres/tests/test_register.py::test_blank_data_registration 2021-07-18 18:05:50,531 - pyreqres - register - register_user - INFO - [Request INFO]: Url: https://reqres.in/api/register; Data: {}
+2021-07-18 18:05:50,993 - pyreqres - api - _UPDATE - WARNING - HTTPError during Request for URL https://reqres.in/api/register. Error Details - 400 Client Error: Bad Request for url: https://reqres.in/api/register
+PASSED
+py-reqres-api-automation/pyreqres/tests/test_users.py::test_list_users[positive] 2021-07-18 18:05:50,995 - pyreqres - users - list_users - INFO - [Request INFO]: Url: https://reqres.in/api/users; Query Parameters: {'page': 2, 'per_page': 6, 'delay': 0}
+2021-07-18 18:05:51,451 - pyreqres - api - GET - INFO - Calling URL https://reqres.in/api/users?page=2&per_page=6&delay=0 Successful
+PASSED
+py-reqres-api-automation/pyreqres/tests/test_users.py::test_list_users[negative] 2021-07-18 18:05:51,453 - pyreqres - users - list_users - INFO - [Request INFO]: Url: https://reqres.in/api/users; Query Parameters: {'page': 3, 'per_page': 12, 'delay': 0}
+2021-07-18 18:05:51,893 - pyreqres - api - GET - INFO - Calling URL https://reqres.in/api/users?page=3&per_page=12&delay=0 Successful
+PASSED
+py-reqres-api-automation/pyreqres/tests/test_users.py::test_valid_get_user 2021-07-18 18:05:51,895 - pyreqres - users - get_user - INFO - [Request INFO]: Url: https://reqres.in/api/users/2
+2021-07-18 18:05:52,056 - pyreqres - api - GET - INFO - Calling URL https://reqres.in/api/users/2 Successful
+PASSED
+py-reqres-api-automation/pyreqres/tests/test_users.py::test_invalid_get_user 2021-07-18 18:05:52,057 - pyreqres - users - get_user - INFO - [Request INFO]: Url: https://reqres.in/api/users/9999
+2021-07-18 18:05:52,525 - pyreqres - api - GET - WARNING - HTTPError during Request for URL https://reqres.in/api/users/9999. Error Details - 404 Client Error: Not Found for url: https://reqres.in/api/users/9999
+PASSED
+py-reqres-api-automation/pyreqres/tests/test_users.py::test_create_user 2021-07-18 18:05:52,526 - pyreqres - users - create_user - INFO - [Request INFO]: Url: https://reqres.in/api/users; Data: {'test': 'pytest', 'language': 'python'}
+2021-07-18 18:05:52,974 - pyreqres - api - _UPDATE - INFO - Calling URL https://reqres.in/api/users Successful
+PASSED
+py-reqres-api-automation/pyreqres/tests/test_users.py::test_update_user_put 2021-07-18 18:05:52,975 - pyreqres - users - update_user_put - INFO - [Request INFO]: Url: https://reqres.in/api/users/2; Data: {'test': 'pytest-update-put', 'language': 'python', 'addition': '1+1'}
+2021-07-18 18:05:53,389 - pyreqres - api - _UPDATE - INFO - Calling URL https://reqres.in/api/users/2 Successful
+PASSED
+py-reqres-api-automation/pyreqres/tests/test_users.py::test_update_user_patch 2021-07-18 18:05:53,390 - pyreqres - users - update_user_patch - INFO - [Request INFO]: Url: https://reqres.in/api/users/2; Data: {'test': 'pytest-update-patch', 'language': 'python'}
+2021-07-18 18:05:53,831 - pyreqres - api - _UPDATE - INFO - Calling URL https://reqres.in/api/users/2 Successful
+PASSED
+py-reqres-api-automation/pyreqres/tests/test_users.py::test_delete_user[existing_user_delete] 2021-07-18 18:05:53,832 - pyreqres - users - delete_user - INFO - [Request INFO]: Url: https://reqres.in/api/users/2
+2021-07-18 18:05:54,282 - pyreqres - api - DELETE - INFO - Calling URL https://reqres.in/api/users/2 Successful
+PASSED
+py-reqres-api-automation/pyreqres/tests/test_users.py::test_delete_user[non_existing_user_delete] 2021-07-18 18:05:54,284 - pyreqres - users - delete_user - INFO - [Request INFO]: Url: https://reqres.in/api/users/9999
+2021-07-18 18:05:54,707 - pyreqres - api - DELETE - INFO - Calling URL https://reqres.in/api/users/9999 Successful
+PASSED
+
+============================== 18 passed in 8.97s ==============================
