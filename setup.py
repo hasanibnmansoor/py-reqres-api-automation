@@ -30,5 +30,11 @@ setup(
     ],
     packages=find_packages(),
     include_package_data=True,
-    install_requires=["Requests"],
+    install_requires=[
+        "requests",
+        "pytest",
+        "pytest-sugar",
+        "pytest-html",
+        "pytest-rerunfailures",
+    ],
 )
